@@ -1,6 +1,8 @@
 ---
 title: Unlock quantized LLM performance on Arm-based NVIDIA DGX Spark
 
+description: Learn how to build and optimize quantized LLMs using llama.cpp on NVIDIA DGX Spark with Grace-Blackwell architecture, leveraging Armv9 SIMD acceleration.
+
 minutes_to_complete: 60
 
 who_is_this_for: This is an introductory topic for AI practitioners, performance engineers, and system architects who want to learn how to deploy and optimize quantized large language models (LLMs) on NVIDIA DGX Spark systems powered by the Grace-Blackwell (GB10) architecture.
@@ -18,8 +20,11 @@ prerequisites:
     - Basic knowledge of quantized large language models (LLMs) and machine learning inference
     - Experience building software from source using CMake and make
 
-
 author: Odin Shen
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 ### Tags
 skilllevels: Introductory
@@ -46,7 +51,7 @@ further_reading:
         type: documentation
     - resource:
         title: Profile llama.cpp performance with Arm Streamline and KleidiAI LLM kernels Learning Path
-        link: https://learn.arm.com/learning-paths/servers-and-cloud-computing/llama_cpp_streamline/
+        link: /learning-paths/servers-and-cloud-computing/llama_cpp_streamline/
         type: blog
     - resource:
         title: Arm-Powered NVIDIA DGX Spark Workstations to Redefine AI
@@ -59,3 +64,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

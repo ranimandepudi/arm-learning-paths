@@ -2,6 +2,7 @@
 ### Title the install tools article with the name of the tool to be installed
 ### Include vendor name where appropriate
 title: NXP MCUXpresso for VS Code
+description: Install the NXP MCUXpresso extension for Visual Studio Code and required dependencies for embedded development on supported desktop hosts.
 
 ### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
@@ -65,11 +66,10 @@ Download and run the installer.
 
 Select one or more packages and click `Install`. 
 
-![MCUXpresso Installer #center](/install-guides/_images/MCUXpresso_Installer.png)
+![MCUXpresso Installer #center](/install-guides/_images/mcuxpresso_installer.png)
 
 ### Are there other embedded development extensions for VS Code?
 
 [Keil Studio for VS Code](https://www.keil.arm.com/) is also available. Refer to the [Arm Keil Studio for VS Code install guide](/install-guides/keilstudio_vs/) for more information.
-
 
 

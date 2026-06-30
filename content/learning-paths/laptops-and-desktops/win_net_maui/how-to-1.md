@@ -16,7 +16,7 @@ Similar to Windows Presentation Foundation (WPF) and Xamarin.Forms, .NET MAUI ut
 
 In this learning path, you will explore how to create a .NET MAUI application and discover how .NET MAUI application performance is enhanced on Arm64 devices, particularly through the computationally intensive task of performing the multiply-add operation on two vectors. This operation, commonly used in many artificial neural network architectures, serves as an excellent example of Arm64's capabilities in handling performance-demanding tasks. 
 
-You can find the complete project code used in this learning path [here](https://github.com/dawidborycki/Arm64.MobileApp.MAUI.git).
+You can find the [complete project code on GitHub](https://github.com/dawidborycki/Arm64.MobileApp.MAUI.git).
 
 ## Before you begin
 Before you begin the implementation, install Visual Studio 2022 with the following workloads:
@@ -53,10 +53,10 @@ Then, accept any other license terms that appear, including the Android SDK - Li
 
 Your project should be now ready. Next, open the Solution Explorer (View -> Solution Explorer) to view the created projects:
 
-![fig6](figures/06.png)
+![fig6](figures/06.webp)
 
 ## Understanding the project structure
-The .NET MAUI project template is structured to enable the development of cross-platform applications using a single codebase, targeting Android, iOS, macOS, and Windows. Therefore, the project we have just created contains the following elements:
+The .NET MAUI project template is structured to enable the development of cross-platform applications using a single codebase, targeting Android, iOS, macOS, and Windows. Therefore, the project you created contains the following elements:
 1. **MauiProgram.cs** - contains the entry point for .NET MAUI application. It's where you configure and set up the app, including services, dependencies, and the main app configuration. It typically contains the CreateMauiApp method, which builds and returns an instance of MauiApp class.
 2. **App.xaml** and **App.xaml.cs** - these files define the application-level resources and the App class, which is derived from Application. This class serves as the central point for managing the app's lifecycle and its main interface.
 3. **Platforms Folder** - this folder contains platform-specific code and resources. It is organized into subfolders for each target platform. Here we have: Android, iOS, MacCatalyst, Tizen, and Windows. These folders can contain platform-specific initialization code, icons, splash screens, and other resources. For example, the Android subfolder contains the MainActivity.cs file, which represents the main activity class that runs when the application starts on an Android device.
@@ -66,4 +66,4 @@ The .NET MAUI project template is structured to enable the development of cross-
 
 You can now run the created application. To do so, click _Debug/Start Debugging_. The running application will look like the figure below:
 
-![fig7](figures/07.png)
+![fig7](figures/07.webp)

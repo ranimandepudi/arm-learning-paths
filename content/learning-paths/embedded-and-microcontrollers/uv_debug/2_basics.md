@@ -1,6 +1,7 @@
 ---
 # User change
 title: "Use basic run/stop debug"
+description: Use basic run and stop debugging in Keil uVision to inspect an embedded application on the target.
 
 weight: 2 # 1 is first, 2 is second, etc.
 
@@ -104,7 +105,7 @@ There is a global variable `g_msTicks` located in `Blinky.c` near line 11 that y
 
 1. Click on `<Enter expression>` twice and enter: `SystemCoreClock`
 2. Right click on the `Value` and deselect **Hexadecimal Display**. 32 MHz will be displayed:  
-![SystemCoreClock in Watch 1 Window](./SystemCoreClockWatch.png)
+![SystemCoreClock in Watch 1 Window](./systemcoreclockwatch.png)
 
 {{% notice Note %}}
 You do not need to stop the program execution to enter variables, raw addresses or structures in a **Watch** or **Memory** window.
@@ -140,7 +141,7 @@ The example application uses the Arm Cortex-M system tick timer.
 
 1. ![System Viewer](./b_uv4_systemviewer.png) Go to **Peripherals - Core Peripherals** and then select **System Tick Timer S (SysTick)**.
 2. The **SysTick Timer** window opens:  
-![SysTick Timer Window](./SysTickTimerWindow.png)
+![SysTick Timer Window](./systicktimerwindow.png)
 1. ![Run](./b_uv4_run.png) **Run (F5)** the application.
 6. While the program is running, type `0x10000` in the `SysTick -> LOAD` register and click in another register or press Enter.
 7. The program execution will speed up. This is the power of Arm CoreSight debugging.
@@ -197,5 +198,5 @@ If you put a RAM address as the expression with no value, the next read and/or w
 - The instruction causing the break is probably a few instructions before this one in the execution stream.
 - To edit a watchpoint, double-click on it in the **Breakpoints** window and its information will be dropped down into the configuration area. Clicking on **Define** will create another watchpoint. You should delete the old one by highlighting it and click on Kill Selected or use the following tip.
 - The checkbox beside the expression in **Current Breakpoints:** as shown above allows you to temporarily unselect or disable a watchpoint without deleting it.
-- You can create a watchpoint with a raw address and no variable value. This is useful for detecting stack overruns. Physical addresses can be entered as `*((unsigned long *)0x20000000)`. Or simply enter the address as shown above.
+- You can create a watchpoint with a raw address and no variable value. This is useful for detecting stack overruns. Physical addresses can be entered as `*((unsigned long *)0x20000000)`. Or enter the address as shown above.
 {{% /notice %}}

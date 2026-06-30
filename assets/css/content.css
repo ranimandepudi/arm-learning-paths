@@ -62,13 +62,14 @@ html[theme="dark"]  div.markdown-content-div > div.code-tabpane {
     --ads-horizontal-tabs-tab-content-background-color: var(--arm-color-surface); 
 }
 
-
+/*
 div.markdown-content-div > table {
-    width: max-content;     /* No full-length tables unless there is a reason */
+    width: max-content;
     margin-top: 16px;
     margin-left: 16px;
     margin-bottom: 24px;
 }
+*/
 html[theme="light"] div.markdown-content-div > table tbody { background-color: var(--arm-white); }
 html[theme="dark"]  div.markdown-content-div > table tbody { background-color: var(--arm-color-base); }
 
@@ -152,7 +153,7 @@ img.content-uploaded-image.centered {
     /* have to style the span like a paragraph, required for nesting caption in default markdown configruation */
     display: block; /* or block, depending on the desired layout */
     font-style: italic;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 0px;
     font-size: 1rem;
 }

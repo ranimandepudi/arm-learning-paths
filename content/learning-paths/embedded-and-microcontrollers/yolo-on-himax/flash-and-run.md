@@ -1,5 +1,6 @@
 ---
 title: Flash firmware onto the microcontroller
+description: Flash YOLO firmware to the Himax WiseEye2 module and verify object detection on the microcontroller.
 weight: 5
 
 ### FIXED, DO NOT MODIFY
@@ -53,7 +54,7 @@ The COM identifier is prefixed with **tty**, so you can use this to help you ide
   {{< tab header="Linux" language="shell">}}
 sudo grep -i 'tty' /var/log/dmesg
   {{< /tab >}}
-  {{< tab header="MacOS" language="shell">}}
+  {{< tab header="macOS" language="shell">}}
 ls /dev/tty.*
   {{< /tab >}}
 {{< /tabpane >}}

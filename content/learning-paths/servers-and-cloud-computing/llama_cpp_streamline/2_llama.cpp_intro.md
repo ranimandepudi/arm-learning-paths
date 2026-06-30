@@ -57,7 +57,7 @@ The architecture of llama.cpp includes several key components that work together
 
 ![Architecture diagram showing llama.cpp components including backends, ggml-cpu library, and KleidiAI integration alt-text#center](images/llama_components.jpg "llama.cpp components")
 
-llama.cpp provides optimized support for Arm CPUs through its `ggml-cpu` library, which leverages Arm-specific vector instructions such as NEON and SVE, and includes an AArch64 trait that accelerates inference using 8-bit integer multiply (i8mm) instructions. The `ggml-cpu` library also integrates the Arm [KleidiAI](https://github.com/ARM-software/kleidiai) library as an additional trait. In addition to Arm CPU support, llama.cpp offers backends for GPU, CUDA, and OpenCL to enable inference on a variety of hardware platforms.
+llama.cpp provides optimized support for Arm CPUs through its `ggml-cpu` library, which leverages Arm-specific vector instructions such as Neon and SVE, and includes an AArch64 trait that accelerates inference using 8-bit integer multiply (i8mm) instructions. The `ggml-cpu` library also integrates the Arm [KleidiAI](https://github.com/ARM-software/kleidiai) library as an additional trait. In addition to Arm CPU support, llama.cpp offers backends for GPU, CUDA, and OpenCL to enable inference on a variety of hardware platforms.
 
 ## Prefill and Decode in autoregressive LLMs
 
@@ -70,7 +70,7 @@ Most autoregressive LLMs are decoder-only models. This refers to the transformer
 Decoder-only models like LLaMA have become dominant for text generation because they are simpler to train at scale, can handle both understanding and generation tasks, and are more efficient for text generation. 
 
 This diagram introduces the idea of Prefill and Decode stages of autoregressive LLMs:
-![Diagram illustrating the two stages of autoregressive LLM inference: Prefill stage processing input tokens and Decode stage generating output tokens sequentially alt-text#center](images/llm_prefill_decode.jpg "Prefill and Decode stages")
+![Diagram illustrating the two stages of autoregressive LLM inference: Prefill stage processing input tokens and Decode stage generating output tokens sequentially alt-text#center](images/llm_prefill_decode.webp "Prefill and Decode stages")
 
 The Prefill stage is shown below, and as you can see, multiple input tokens of the prompt are processed simultaneously.
 
@@ -78,11 +78,11 @@ In the context of Large Language Models (LLMs), a *matrix* is a two-dimensional 
 
 This stage mainly performs GEMM operations (General Matrix Multiply; where one matrix is multiplied by another matrix) to generate the first output token.
 
-![Diagram showing the Prefill stage processing multiple input tokens in parallel through transformer blocks using GEMM operations alt-text#center](images/transformer_prefill.jpg "Prefill stage")
+![Diagram showing the Prefill stage processing multiple input tokens in parallel through transformer blocks using GEMM operations alt-text#center](images/transformer_prefill.webp "Prefill stage")
 
 At the Decode stage, the model utilizes the [KV cache](https://huggingface.co/blog/not-lain/kv-caching) (Key-Value cache; which is stored attention information from previous tokens). This stage mainly performs GEMV operations (General Matrix-Vector multiply - where a vector is multiplied by a matrix) to generate subsequent output tokens one by one.
 
-![Diagram showing the Decode stage generating tokens one by one using KV cache and GEMV operations alt-text#center](images/transformer_decode.jpg "Decode stage")
+![Diagram showing the Decode stage generating tokens one by one using KV cache and GEMV operations alt-text#center](images/transformer_decode.webp "Decode stage")
 
 ## Summary
 

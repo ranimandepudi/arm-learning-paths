@@ -1,5 +1,6 @@
 ---
 title: Build and Run a Smart Home Assistant on Raspberry Pi 5 with LLMs
+description: Build and run the web-based Raspberry Pi 5 smart home assistant that uses a local LLM to control GPIO devices.
 weight: 5
 
 ### FIXED, DO NOT MODIFY
@@ -35,7 +36,7 @@ In the previous section, you configured a LED on GPIO pin 17. The smart home ass
 The code uses gpiozero with lgpio backend for Raspberry Pi 5 compatibility. You can use compatible output devices such as LEDs, relays, or small loads connected to these GPIO pins to represent actual smart home devices. All pin assignments are optimized for the Raspberry Pi 5's GPIO layout.
 {{% /notice %}}
 
-![Raspberry Pi 5 connected to a breadboard with LEDs, push button, and sensor module alt-text#center](hardware.jpeg "Setup that includes a blue LED (mapped to Living Room Light on GPIO 17), a red LED, push button, and a sensor module.")
+![Raspberry Pi 5 connected to a breadboard with LEDs, push button, and sensor module alt-text#center](hardware.webp "Setup that includes a blue LED (mapped to Living Room Light on GPIO 17), a red LED, push button, and a sensor module.")
 
 This setup illustrates a simulated smart home with controllable devices.
 
@@ -78,7 +79,7 @@ Try asking the assistant to `turn on living room light`. If you've connected add
 
 Open your browser and navigate to `http://0.0.0.0:8000`, or as printed in the terminal output.
 
-![Web interface of the smart home assistant showing device control through LLM commands alt-text#center](UI3.png "Interacting with the LLM through the web interface")
+![Web interface of the smart home assistant showing device control through LLM commands alt-text#center](ui3.png "Interacting with the LLM through the web interface")
 
 
 ## Command line interface

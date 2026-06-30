@@ -17,6 +17,7 @@ In this section, you will use a Android demo application to demonstrate local in
     ``` bash
     export ANDROID_NDK=$ANDROID_HOME/ndk/29.0.14206865/
     export ANDROID_ABI=arm64-v8a
+    export ANDROID_SDK=$ANDROID_HOME
     ```
 
 {{% notice Note %}}
@@ -54,13 +55,13 @@ adb push <tokenizer.bin> /data/local/tmp/llama/
 
 1. Use Android Studio's device explorer to look for the model files.
 
-![Device Explorer](device-explorer.png "Figure 1. Android Studio Device Explorer")
+![Device Explorer](device-explorer.webp "Figure 1. Android Studio Device Explorer")
 
 2. Upload the files.
 
 If the files are not on the device, use the device explorer to copy them.
 
-![Files Upload](device-explorer-upload.png "Figure 2. Android Studio upload files using Device Explorer")
+![Files Upload](device-explorer-upload.webp "Figure 2. Android Studio upload files using Device Explorer")
 
 ## Build the Android Package Kit
 

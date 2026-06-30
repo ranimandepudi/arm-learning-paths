@@ -59,13 +59,13 @@ This is the location of the server where your VM will reside. While it is genera
 
 These are reliability and security settings. They can generally be left as default.
 
-![az5 #center](images/AzureAvailability.png "Select Availability options and Security type if necessary")
+![az5 #center](images/azureavailability.png "Select Availability options and Security type if necessary")
 
 ### Image
 
 This is the operating system that will run on your VM. Select the appropriate one from the pull-down. Some will have additional pricing associated with them. 
 
-![az6 #center](images/AzureImage.png "Select an image available for Arm VMs")
+![az6 #center](images/azureimage.png "Select an image available for Arm VMs")
 
 You can then select a particular version of your preferred OS from the `Select` pull-down of that OS tab.
 
@@ -99,7 +99,7 @@ This section defines how users [connect](https://learn.microsoft.com/en-us/azure
 
  `SSH public key` is the most common and recommended choice.
 
-![alt-text #center](images/AzureKey.png "Select the 'SSH public key' authentication type")
+![alt-text #center](images/azurekey.png "Select the 'SSH public key' authentication type")
 
  ### Username
 
@@ -170,7 +170,7 @@ will identify the host machine as `aarch64`.
 
 ### Run hello world
 
-Install the `gcc` compiler. If you are using `Ubuntu`, use the following commands. If not, refer to the [GNU compiler install guide](/install-guides/gcc):
+Install the `gcc` compiler. If you are using `Ubuntu`, use the following commands. If not, refer to the [GNU compiler install guide](/install-guides/gcc/):
 
 ```console
 sudo apt-get update
@@ -217,4 +217,4 @@ Open `Control Panel` > `System` and verify that `Device` > `System Type` identif
 
 Cloud infrastructure deployment is typically done via Infrastructure as code (IaC) automation tools. There are Cloud Service Provider specific tools like [Azure Resource Manager](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) and the open source tool [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview).
 
-There are also Cloud Service Provider agnostic tools like [Terraform](https://www.terraform.io/). There is a [deploying Arm instances on Azure using Terraform learning path](/learning-paths/servers-and-cloud-computing/azure-terraform) that should be reviewed next.
+There are also Cloud Service Provider agnostic tools like [Terraform](https://www.terraform.io/). There is a [deploying Arm instances on Azure using Terraform learning path](/learning-paths/servers-and-cloud-computing/azure-terraform/) that should be reviewed next.

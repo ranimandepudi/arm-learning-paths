@@ -1,16 +1,14 @@
 ---
-title: Build Zephyr projects with Zephyr Workbench in VS Code
+title: Build Zephyr projects with Workbench for Zephyr in VS Code
 
-draft: true
-cascade:
-    draft: true
+description: Learn how to set up the Workbench for Zephyr extension in VS Code, create and build Zephyr applications for Arm Cortex-M, and debug firmware using integrated memory analysis and breakpoint debugging.
 
 minutes_to_complete: 30
 
-who_is_this_for: This is an introductory topic for embedded developers targeting Arm-based platforms with the Zephyr RTOS using the Zephyr Workbench extension for VS Code.
+who_is_this_for: This is an introductory topic for embedded developers targeting Arm-based platforms with the Zephyr RTOS using the Workbench for Zephyr extension for VS Code.
 
 learning_objectives:
-    - Install and configure the Zephyr Workbench extension in VS Code
+    - Install and configure the Workbench for Zephyr extension in VS Code
     - Set up a complete Zephyr development environment including the SDK and toolchain
     - Create, build, and debug Zephyr applications using hands-on examples
     - Perform memory usage analysis and apply basic optimization techniques
@@ -18,12 +16,17 @@ learning_objectives:
 
 prerequisites:
     - Basic familiarity with embedded C programming
-    - Visual Studio Code installed and running
+    - Visual Studio Code
     - A Cortex-M development board
+    - Windows 10+ (64-bit), macOS with Homebrew, or Linux (preferably Ubuntu 20.04+)
 
 author: 
     - Ayoub Bourjilat
     - Odin Shen
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 skilllevels: Introductory
 subjects: RTOS Fundamentals
@@ -41,8 +44,8 @@ further_reading:
         link: https://docs.zephyrproject.org/latest/index.html
         type: documentation
     - resource:
-        title: Zephyr Workbench Official Website
-        link: https://zephyr-workbench.com/
+        title: Workbench for Zephyr Official Website
+        link: https://z-workbench.com/
         type: website
     - resource:
         title: AC6 Zephyr Training
@@ -54,3 +57,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

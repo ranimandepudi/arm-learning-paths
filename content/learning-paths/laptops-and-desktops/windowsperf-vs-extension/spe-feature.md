@@ -9,7 +9,7 @@ layout: learningpathall
 
 ## Introduction
 
-The SPE feature is a subset of the Sampling feature that we just discussed.
+The SPE feature is a subset of the Sampling feature previously discussed.
 
 {{% notice Note %}}
 This section requires hardware that supports the SPE specification to function properly.
@@ -106,4 +106,4 @@ To do so you need to go to go to `Tools -> WindowsPerf Host Data` scroll to the 
 All the SPE results will be prefixed by your SPE device version name (e.g. `FEAT_SPEv1p1`)
 {{% /notice %}}
 
-![SPE results #center](./spe-results.png)
+![SPE results #center](./spe-results.webp)

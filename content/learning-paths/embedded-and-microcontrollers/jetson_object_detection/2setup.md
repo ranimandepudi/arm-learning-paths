@@ -1,5 +1,6 @@
 ---
 title: Set up your Jetson Orin Nano
+description: Prepare the Jetson Orin Nano hardware, camera, and software environment for image classification and object detection.
 weight: 2
 
 ### FIXED, DO NOT MODIFY
@@ -37,7 +38,7 @@ If you are unsure of how to insert the ribbon into the connector [watch the vide
 You can use a USB camera instead for object detection, but the instructions below assume a MIPI CSI-2 camera.
 {{% /notice %}}
 
-![image of the ribbon inserted into the connector](./cam0connector.jpg)
+![image of the ribbon inserted into the connector](./cam0connector.webp)
 
 ### Power on the Jetson Orin Nano
 

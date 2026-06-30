@@ -1,5 +1,6 @@
 ---
 title: Run an application in a Realm using the Arm Confidential Compute Architecture (CCA)
+description: Learn how to run the Arm CCA reference software stack on an FVP with RME support, create a Realm virtual machine, and obtain attestation tokens for confidential computing.
 
 minutes_to_complete: 120
 
@@ -10,19 +11,26 @@ learning_objectives:
     - Create a virtual machine in a Realm running guest Linux using a pre-built docker container.
     - Run a simple application in a Realm running guest Linux.
     - Obtain a CCA attestation token from the virtual guest in a Realm.
+    - Run the CCA software stack using MEC (Memory Encryption Contexts)
 
 prerequisites:
-    - An AArch64 or x86_64 computer running Linux. You can use cloud instances, refer to the list of [Arm cloud service providers](/learning-paths/servers-and-cloud-computing/csp/).
+    - An AArch64 or x86_64 computer running Linux or macOS. You can use cloud instances, refer to the list of [Arm cloud service providers](/learning-paths/servers-and-cloud-computing/csp/).
 
-author: Pareena Verma
+author:
+    - Pareena Verma
+    - Arnaud de Grandmaison
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 ### Tags
 skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
-    - Neoverse 
+    - Neoverse
 operatingsystems:
-    - Linux 
+    - Linux
 tools_software_languages:
     - GCC
     - FVP
@@ -31,8 +39,11 @@ tools_software_languages:
     - Docker
     - Runbook
 
-    
 further_reading:
+    - resource:
+        title: Learn the architecture - Introducing Arm Confidential Compute Architecture
+        link: https://developer.arm.com/documentation/den0125
+        type: documentation
     - resource:
         title: Arm Confidential Compute Architecture
         link: https://www.arm.com/architecture/security-features/arm-confidential-compute-architecture
@@ -50,10 +61,10 @@ further_reading:
         link: https://developer.arm.com/documentation/den0137/latest/
         type: documentation
 
-
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

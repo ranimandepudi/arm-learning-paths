@@ -13,7 +13,7 @@ Any Windows on Arm computer which has the required tools installed can be used f
 
 Follow the links to install the required tools. 
 
-* [Visual Studio 2022 or higher](/install-guides/vs-woa). 
+* [Visual Studio 2022 or higher](/install-guides/vs-woa/). 
 * [Install LLVM support in Visual Studio](/install-guides/vs-woa/#install-llvm-support-in-visual-studio).
 * [Strawberry Perl](https://strawberryperl.com/) 
 
@@ -76,19 +76,19 @@ This opens up the `CMake Settings` dialog.
 
 You can now add a new configuration to build PuTTY for Arm. This configuration uses the LLVM toolchain installed by the Visual Studio Installer. 
 
-![putty_2](putty_2.png)
+![putty_2](putty_2.webp)
 
 6. Add a new configuration
 
 In `CMake Settings`, click on `+` sign to `Add a New Configuration` and select `arm64-Clang-Debug`. 
 
-![putty_3](putty_3.png)
+![putty_3](putty_3.webp)
 
 7. Change the toolset
 
 With the `arm64-Clang-Debug` configuration selected, change the `Toolset` from the drop-down menu to `clang_cl_arm64`. 
 
-![putty_4](putty_4.png)
+![putty_4](putty_4.webp)
 
 8. Generate the CMake configuration
 
@@ -152,7 +152,7 @@ If you would like to build with a different version of LLVM, you will need to ma
 
 At the time of writing, the latest version with Windows on Arm support is LLVM 18.1.8. 
 
-Ensure you have downloaded and installed [LLVM 18.1.8](/install-guides/llvm-woa)
+Ensure you have downloaded and installed [LLVM 18.1.8](/install-guides/llvm-woa/)
 
 On `CMake Settings` page in Visual Studio, select the `Show advanced variables`checkbox under `CMake variables and cache`.
 

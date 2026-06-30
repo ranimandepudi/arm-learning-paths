@@ -1,6 +1,7 @@
 ---
 # User change
 title: Keil MDK versions
+description: Compare Keil MDK versions and choose the development environment used for the embedded assembly programming examples.
 
 weight: 2 # 1 is first, 2 is second, etc.
 
@@ -22,6 +23,6 @@ The assembly level functions will conform to the [Arm Procedure Call Standard](h
 
 [Keil MDK](https://www.keil.arm.com/) can support a number of different environments.
 
-Keil Studio is a collection of `Visual Studio Code` Extensions to provide a complete development IDE. For installation instructions, refer to the [Arm Keil Studio for VS Code](/install-guides/keilstudio_vs/) install guide. Windows, Linux, and MacOS are supported hosts.
+Keil Studio is a collection of `Visual Studio Code` Extensions to provide a complete development IDE. For installation instructions, refer to the [Arm Keil Studio for VS Code](/install-guides/keilstudio_vs/) install guide. Windows, Linux, and macOS are supported hosts.
 
 You can also use the legacy μVision IDE. For installation instructions, refer to the [Keil μVision](/install-guides/mdk/) install guide. Note that only Windows is a supported host.

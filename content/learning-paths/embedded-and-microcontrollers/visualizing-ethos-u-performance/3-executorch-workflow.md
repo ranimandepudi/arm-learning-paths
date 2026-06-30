@@ -1,6 +1,7 @@
 ---
 # User change
 title: "Understand the ExecuTorch workflow"
+description: Understand the ExecuTorch conversion and runtime flow used to deploy neural network models to Arm targets.
 
 weight: 3
 
@@ -44,7 +45,7 @@ The diagram below summarizes the ExecuTorch workflow from model export to deploy
 
 This three-step workflow ensures your TinyML models are performance-tuned and hardware-aware before deployment—even without access to physical silicon.
 
-![Diagram showing the three-step ExecuTorch workflow from model export to deployment#center](./how-executorch-works-high-level.png "The three-step ExecuTorch workflow from model export to deployment")
+![Diagram showing the three-step ExecuTorch workflow from model export to deployment#center](./how-executorch-works-high-level.webp "The three-step ExecuTorch workflow from model export to deployment")
 
 ## What's next?
 

@@ -3,19 +3,24 @@ title: "Migrate x86-64 SIMD to Arm64"
 
 minutes_to_complete: 30
 
+description: Learn how to migrate x86-64 SIMD code to Arm64 by mapping Intel SSE/AVX to Arm Neon, SVE, and SME, with code examples and migration strategies using autovectorization or intrinsics.
+
 who_is_this_for: This is an advanced topic for developers migrating vectorized (SIMD) code from x86-64 to Arm64.
 
 learning_objectives:
-     - Identify how Arm vector extensions including NEON, Scalable Vector Extension (SVE), and Scalable Matrix Extension (SME) map to vector extensions from other architectures
+     - Identify how Arm vector extensions including Neon, Scalable Vector Extension (SVE), and Scalable Matrix Extension (SME) map to vector extensions from other architectures
      - Plan a migration strategy using autovectorization, intrinsics, or library substitution
-   
 
 prerequisites:
     - Familiarity with vector extensions, SIMD programming, and compiler intrinsics
-    - Access to Linux systems with NEON and SVE support
+    - Access to Linux systems with Neon and SVE support
 
 author:
     - Jason Andrews
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 ### Tags
 skilllevels: Advanced
@@ -42,7 +47,7 @@ further_reading:
         type: documentation
     - resource:
         title: Port code to Arm Scalable Vector Extension (SVE)
-        link: https://learn.arm.com/learning-paths/servers-and-cloud-computing/sve
+        link: /learning-paths/servers-and-cloud-computing/sve
         type: website
     - resource:
         title: Introducing the Scalable Matrix Extension for the Armv9-A Architecture
@@ -54,7 +59,7 @@ further_reading:
         type: blog
     - resource:
         title: Build adaptive libraries with multiversioning
-        link: https://learn.arm.com/learning-paths/cross-platform/function-multiversioning/
+        link: /learning-paths/cross-platform/function-multiversioning/
         type: website
     - resource:
         title: SME Programmer's Guide
@@ -79,6 +84,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
-
-   
 

@@ -1,101 +1,112 @@
 ---
-title: Install and configure Zephyr Workbench in VS Code
+title: Set up the Workbench for Zephyr development environment
+description: Install Workbench for Zephyr in VS Code and configure the tools needed for Arm Cortex-M Zephyr development.
 weight: 2
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## Set up your Zephyr development environment
+## Set up the Workbench for Zephyr development environment
 
-Setting up a [Zephyr](https://zephyrproject.org/) RTOS development environment from scratch can be challenging, requiring you to manually install SDKs, configure toolchains, and initialize workspace directories. These steps often vary across operating systems and board vendors, leading to a fragmented and error-prone setup process.
+Getting started with [Zephyr](https://zephyrproject.org/) RTOS development can be challenging. You often need to install SDKs, set up toolchains, and organize workspace directories by hand. 
 
-[Zephyr Workbench](https://zephyr-workbench.com/) is an open-source Visual Studio Code extension that transforms Zephyr RTOS development into a streamlined IDE experience. Created by [Ac6](https://www.ac6.fr/en/), it automates toolchain setup, project management, and debugging, making Zephyr projects faster to start and easier to scale.
+[Workbench for Zephyr](https://z-workbench.com/) is an open-source [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=Ac6.zephyr-workbench) that transforms Zephyr RTOS development into a streamlined IDE experience. Created by [Ac6](https://www.ac6.fr/en/), it automates toolchain setup, project management, and debugging, making Zephyr projects faster to start and easier to scale.
 
-In this Learning Path, you'll learn the essential steps to install Zephyr Workbench and configure a complete development environment on your local machine. Once complete, you'll be ready to create, build, and debug applications for Arm Cortex-M platforms using Zephyr RTOS.
+In this Learning Path, you'll set up Workbench for Zephyr and configure a complete development environment on your computer. By the end, you can create, build, and debug applications for Arm Cortex-M boards using Zephyr RTOS.
 
-Zephyr Workbench provides one-click environment setup that automatically installs the required tools including Python, CMake, Ninja, and Git. It supports importing and managing Zephyr SDKs with version and architecture selection, while initializing west workspaces and creating board-specific applications from samples. The extension builds Zephyr applications and flashes hardware directly from the VS Code interface. It also provides breakpoint debugging and memory usage insights with hardware probe support.
+Workbench for Zephyr makes it easy to set up your development environment with a single click. It automatically installs all the tools you need, such as Python, CMake, Ninja, and Git. You can import and manage different versions of the Zephyr SDK, choose the right architecture, and quickly initialize West workspaces. The extension lets you create board-specific applications from sample projects, build and flash them to your hardware, and debug your code, all within Visual Studio Code. You also get features like breakpoint debugging and memory usage insights when using a supported hardware probe.
 
-## What you need before installing Zephyr Workbench
+## Install dependencies 
 
-To get started with Zephyr Workbench you need to have Visual Studio Code downloaded, installed, and running on your computer.
+To get started with Workbench for Zephyr, you need to have Visual Studio Code downloaded, installed, and running on your computer:
 
-For Windows, you need version 10 or later (64-bit), along with administrator privileges for installing tools and drivers. 
 
+### Windows
+For Windows, you need version 10 or later (64-bit x64), along with administrator privileges for installing runners and drivers. 
+
+### macOS
 On macOS, the Homebrew package manager is required. To install Homebrew, run the following command:
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Zephyr Workbench supports STM32 development boards (STM32 Discovery, Nucleo series), Nordic Semiconductor boards (nRF52, nRF53, nRF91 series), NXP development boards (FRDM, LPCXpresso series), Espressif boards (ESP32-based boards), and many other Zephyr-supported platforms. You need a development board to try out the code examples.
+### Linux
+To use Workbench for Zephyr on Linux, install a recent 64-bit distribution such as Ubuntu 20.04 or later, Fedora, Clear Linux OS, or Arch Linux. Other distributions can work, but you might need to manually configure some system packages. After installing your operating system, use the Workbench host tools manager to check that all required tools are installed correctly.
 
-## Configure the Zephyr Workbench extension in Visual Studio Code
 
-This section covers installing the Zephyr Workbench extension and configuring your Arm development environment.
+Zephyr Workbench supports STM32 development boards (STM32 Discovery, Nucleo series), Nordic Semiconductor boards (nRF52, nRF53, nRF91 series), NXP development boards (FRDM, LPCXpresso series), Espressif boards (ESP32-based boards), and many other Zephyr-supported platforms like Renesas, Silabs or Infineon. You need a development board to try out the code examples.
 
-### Install the extension
+## Install and configure the Zephyr Workbench extension
 
-To install the Zephyr Workbench extension, open Visual Studio Code and navigate to the Extensions view by selecting the Extensions icon in the Activity Bar. 
+This section covers installing the Workbench for Zephyr extension and configuring your Arm development environment.
 
-You can also use the keyboard shortcut `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS).
+To install the Workbench for Zephyr extension, open **Visual Studio Code**. In the **Activity Bar**, select the **Extensions** icon to open the **Extensions view**.
 
-In the search box, type "Zephyr Workbench" and locate the official "Zephyr Workbench" extension by Ac6. Select **Install** to add the extension to VS Code.
+You can also use the keyboard shortcut **Ctrl+Shift+X** on Windows or Linux, or **Cmd+Shift+X** on macOS.
 
-The extension icon appears in the Activity Bar, and a welcome message may appear confirming successful installation.
+In the search box, enter `Workbench for Zephyr`. Locate the official extension by **Ac6** and select **Install**.
 
-Once installed, the Zephyr Workbench icon appears in the sidebar with a welcome screen.
+After installation, the Workbench for Zephyr icon appears in the **Activity Bar**. A welcome screen confirms that the extension is ready to use.
 
-### Install the required host tools
+## Install the required host tools
 
-In the Zephyr Workbench panel, select **Install Host Tools** to automatically install the required dependencies. 
+In the Workbench for Zephyr panel, select **Install Host Tools** to automatically install the required dependencies. 
 
 This process installs Python 3.x, CMake, the Ninja build system, Git, Device Tree Compiler (DTC), and the West meta-tool.
 
-![Install Host Tools #center](images/install_host_tools.png)
+![Workbench for Zephyr extension panel in Visual Studio Code showing the Install Host Tools button highlighted, with a checklist of required tools including Python, CMake, Ninja, Git, and Device Tree Compiler#center](images/install_host_tools.webp "Workbench for Zephyr Install Host Tools panel")
    
 {{% notice Note %}}
-On Windows, you may be prompted for permission when tools are executed. Select "Allow" when requested.
-{{% /notice %}}
+On Windows, you might see permission prompts when Workbench for Zephyr installs or runs tools. Select **Allow** to continue with the setup.{{% /notice%}}
 
-When the installation completes, select **Verify Host Tools** to check the version of each installed package.
+When the installation completes, select **Verify Host Tools** to confirm that each required package is installed and up to date. The panel displays the version and status for Python, CMake, Ninja, Git, and Device Tree Compiler. If any tool is missing or out of date, follow the prompts to resolve the issue before continuing.
+## Import and configure the Zephyr toolchain
 
-### Import and configure the toolchain
+To build and debug Zephyr applications for Arm Cortex-M boards, you need to import and configure the Zephyr toolchain using Workbench for Zephyr.
 
-Next, download and configure the toolchain by selecting **Import Toolchain** in the Zephyr Workbench panel. Select the toolchain family (*Zephyr SDK*) and configure the SDK Type by choosing *Minimal* for basic functionality.
+In the Workbench for Zephyr panel, select **Import Toolchain**. This opens a guided setup panel.
 
-Select your desired version (such as v0.17.0 or v0.17.3) and choose the target architectures. For this Learning Path, you only need to select *arm*. 
+In the **Import Toolchain** panel, configure the following options to set up your Zephyr toolchain for Arm development:
 
-Specify the parent directory for SDK installation and select **Import** to download and install the SDK.
+- **Toolchain Family**: select *Zephyr SDK* to use the official Zephyr toolchain.
+- **SDK Type**: select *Minimal* to install only the essential components needed for development.
+- **Version**: select the Zephyr SDK release you want to use, such as v0.17.0 or v0.17.3.
+- **Target Architectures**: select *arm* to target Arm-based boards.
 
-![Import Toolchain #center](images/import_toolchain.png)
+These settings ensure your environment is optimized for Arm Cortex-M development. After configuring these options, continue with the import process to download and install the selected SDK.
+
+Next, specify the directory where you want to install the SDK. Select **Import** to start the download and installation process. When the import completes, the panel displays a confirmation that the toolchain is ready.
+
+If you see errors during import, check your internet connection and confirm you have at least 2 GB of free disk space. For more troubleshooting tips, review the extension's documentation or check the Visual Studio Code output panel.
 
 
-### Initialize the Zephyr project workspace
+![Workbench for Zephyr Import Toolchain panel in Visual Studio Code showing dropdown menus for selecting toolchain family, SDK type, version, and target architectures including Zephyr SDK, Minimal, and arm options#center](images/import_toolchain.webp "Workbench for Zephyr Import Toolchain panel")
 
-Zephyr uses a Git-based workspace manager called West to organize its source code, modules, and samples. Use Zephyr Workbench to initialize your first West workspace.
 
-In the Zephyr Workbench panel, select **Initialize Workspace** to set up your project environment. Configure the workspace settings by selecting "Minimal from template" for the source location and using the default path `https://github.com/zephyrproject-rtos/zephyr`. 
+## Initialize the Zephyr project workspace
 
-Choose a target-specific template (such as STM32 or NXP) and select your Zephyr version (such as v3.7.0 or v4.1.0). Specify the directory for your workspace, keeping in mind that initialization takes approximately 10 minutes to complete. 
+Zephyr uses a Git-based workspace manager called West to organize its source code, modules, and samples. Use Workbench for Zephyr to initialize your first West workspace.
+
+In the Workbench for Zephyr panel, select **Initialize Workspace** to set up your project environment. Configure the workspace settings by selecting **Minimal from template** for the source location and using the default path `https://github.com/zephyrproject-rtos/zephyr`. 
+
+Choose a target-specific template (such as STM32 or NXP) and select your Zephyr version (such as v4.3.0 or later). Specify the directory for your workspace, keeping in mind that initialization takes approximately 10 minutes to complete. 
 
 Select **Import** to create and update the workspace.
 
-![Initialize West Workspace #center](images/initialize_workspace.png)
+![Workbench for Zephyr Initialize Workspace panel in Visual Studio Code showing fields for setting up a West workspace, including template selection from Minimal, STM32, and NXP options, with Zephyr version dropdown listing v3.7.0 and v4.1.0#center](images/initialize_workspace.webp "Workbench for Zephyr Initialize Workspace panel in Visual Studio Code.")
    
 {{% notice Note %}}
-The workspace initialization downloads the Zephyr source code and dependencies. This process may take several minutes depending on your internet connection speed.
+The workspace initialization downloads the Zephyr source code and dependencies. This process can take several minutes depending on your internet connection speed.
 {{% /notice %}}
 
-### Verify setup
+## Verify setup
 
-Test your setup by confirming that the Zephyr Workbench panel shows all components as installed successfully. Verify the host tools are installed, the SDK is imported and detected, and the West workspace is initialized. Ensure no error messages appear in the VS Code output panel.
+Test your setup by confirming that the Workbench for Zephyr panel shows all components as installed successfully. Verify the host tools are installed, the SDK is imported and detected, and the West workspace is initialized. Ensure no error messages appear in the VS Code output panel.
 
 {{% notice Note %}}
-**Troubleshooting tips:**
-- Run VS Code as Administrator if host tool installation fails on Windows
-- Ensure internet access is allowed through your firewall
-- Check for minimum 2 GB free disk space before importing SDK
+If you have trouble installing host tools on Windows, try running Visual Studio Code as an administrator. Make sure your firewall allows internet access so dependencies can download. Before importing the SDK, confirm you have at least 2 GB of free disk space.
 {{% /notice %}}
 
-You're ready to create and build your first Zephyr application targeting an Arm Cortex-M board.
+You're now ready to create and build your first Zephyr application targeting an Arm Cortex-M board.

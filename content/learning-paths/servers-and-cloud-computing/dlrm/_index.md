@@ -1,6 +1,6 @@
 ---
 title: Building and Benchmarking DLRM on Arm Neoverse V2 with MLPerf
-
+description: Learn how to build and benchmark the Deep Learning Recommendation Model using PyTorch and MLPerf on Arm Neoverse V2 processors.
 
 minutes_to_complete: 90
 
@@ -14,12 +14,20 @@ prerequisites:
     - Any [Arm-based instance](/learning-paths/servers-and-cloud-computing/csp/) from a cloud service provider (CSP), or an on-premise Arm server with at least 400GB of RAM and 800 GB of disk space.
 
 author: 
+    - Phalani Paladugu
     - Annie Tallund
     - Pareena Verma
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 ### Tags
 skilllevels: Introductory
 subjects: Performance and Architecture
+cloud_service_providers:
+  - AWS
+  - Google Cloud
 armips:
     - Neoverse
 tools_software_languages:
@@ -28,7 +36,6 @@ tools_software_languages:
     - Google Cloud
 operatingsystems:
     - Linux
-cloud_service_providers: AWS
 
 further_reading:
     - resource:
@@ -40,11 +47,10 @@ further_reading:
         link: https://github.com/mlcommons/inference/tree/master
         type: website
 
-
-
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

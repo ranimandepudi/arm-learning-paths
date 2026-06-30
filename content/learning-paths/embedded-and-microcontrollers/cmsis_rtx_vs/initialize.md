@@ -1,6 +1,7 @@
 ---
 # User change
 title: "Initialize the Operating System"
+description: Initialize the CMSIS-RTOS2 kernel in the Keil Studio project and prepare the application startup code.
 
 weight: 3 # 1 is first, 2 is second, etc.
 
@@ -13,7 +14,7 @@ When setting up the project's Run-Time Environment, ensure you add the appropria
 
 Once this is done, the `RTX5` initialization code is typically the same. It involves setting up the `SysTick` timer with the [SystemCoreClockUpdate()](https://www.keil.com/pack/doc/CMSIS/Core/html/group__system__init__gr.html#gae0c36a9591fe6e9c45ecb21a794f0f0f) function, then initializing and starting the RTOS.
 
-## Create `main()`
+## Create the main() function 
 
 Return to the `CMSIS` view.
 
@@ -54,6 +55,6 @@ void thread(void *);
 ```
 The argument for this function is provided as the second parameter of the [osThreadNew()](https://arm-software.github.io/CMSIS_6/latest/RTOS2/group__CMSIS__RTOS__ThreadMgmt.html#ga48d68b8666d99d28fa646ee1d2182b8f) function. Use `NULL` if no argument to pass.
 
-In the example above, `app_main` is used as the main application thread, but this naming is arbitrary. From here, you will spawn all other threads in the RTOS.
+In the example above, `app_main` is used as the main application thread, but this naming is arbitrary. From here, you'll spawn all other threads in the RTOS.
 
 {{% notice %}} Tip: Naming the main application thread is flexible. Choose a name that clearly reflects its function. {{% /notice %}}

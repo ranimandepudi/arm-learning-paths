@@ -47,7 +47,7 @@ If Python3 is not installed, you can download and install it from [python.org](h
 
 Alternatively, you can also install Python3 using package managers such as Homebrew or APT. 
 
-If you are using Windows on Arm, see the [Python install guide](https://learn.arm.com/install-guides/py-woa/).
+If you are using Windows on Arm, see the [Python install guide](/install-guides/py-woa/).
 
 Next, if you do not already have it, download and install [Visual Studio Code](https://code.visualstudio.com/download).
 
@@ -117,7 +117,7 @@ To ensure everything is set up correctly, follow these next steps:
 
 4. Select the Python kernel you created earlier, `pytorch-env`. To do so, click **Kernels** in the top right-hand corner. Then, click **Jupyter Kernel...**, and you will see the Python kernel as shown below:
 
-![img1 alt-text#center](figures/1.png "Figure 1: Python kernel.")
+![Screenshot of Visual Studio Code showing the Jupyter Kernel selection dialog with the pytorch-env Python kernel listed and highlighted for selection#center](figures/1.webp "Python kernel selection in VS Code")
 
 5. In your Jupyter notebook, run the following code to verify PyTorch is working correctly:
 
@@ -127,6 +127,6 @@ print(torch.__version__)
 ```
 
 It will look as follows:
-![img2 alt-text#center](figures/2.png "Figure 2: Jupyter Notebook.")
+![Screenshot of Jupyter Notebook in Visual Studio Code showing the executed cell with the torch import statement and version output, confirming PyTorch is installed and working correctly#center](figures/2.webp "Jupyter Notebook with PyTorch version output")
 
 Now you have set up your development environment, you can move on to creating a PyTorch model.

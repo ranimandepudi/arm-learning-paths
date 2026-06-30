@@ -6,7 +6,7 @@ weight: 2
 layout: learningpathall
 ---
 
-To debug the Neoverse N2 reference firmware, you need Arm Development Studio installed, and an appropriate license. See the [Arm Development Studio Install Guide](/install-guides/armds) for instructions. Screenshots are from Arm Development Studio 2023.0.
+To debug the Neoverse N2 reference firmware, you need Arm Development Studio installed, and an appropriate license. See the [Arm Development Studio Install Guide](/install-guides/armds/) for instructions. Screenshots are from Arm Development Studio 2023.0.
 
 You also need the Neoverse RD-N2 Reference Design Software Stack set up, and an associated FVP (Fixed Virtual Platform). You should be familiar with [Get started with the Neoverse Reference Design Software Stack](/learning-paths/servers-and-cloud-computing/refinfra-quick-start/) before you start debugging.
 
@@ -22,7 +22,7 @@ To prepare for debugging, remove the `–R` parameter from the `PARAMS=` section
 
 When `-R` is used, the FVP continues execution and does not wait for the debug connection.
 
-![modify parameters alt-text#center](images/modify_params.png "Figure 1. Modify run_model.sh")
+![modify parameters alt-text#center](images/modify_params.webp "Figure 1. Modify run_model.sh")
 
 {{% notice Debug server %}}
 To start a `CADI` debug server, use the `-S` option. For an `Iris` debug server, change this to `-I` instead.

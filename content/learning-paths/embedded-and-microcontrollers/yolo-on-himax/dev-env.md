@@ -1,5 +1,6 @@
 ---
 title: Set up the environment
+description: Install the software tools and SDK dependencies required to build YOLO firmware for the Himax WiseEye2 module.
 weight: 3
 
 ### FIXED, DO NOT MODIFY
@@ -9,7 +10,7 @@ layout: learningpathall
 This Learning Path has been validated on Ubuntu 22.04 LTS and macOS.
 
 {{% notice %}}
-If you are running Windows, you can use Ubuntu through Windows subsystem for Linux 2 (WSL2). Check out [Get started with Windows Subsystem for Linux (WSL) on Arm](https://learn.arm.com/learning-paths/laptops-and-desktops/wsl2/setup/) to learn more.
+If you are running Windows, you can use Ubuntu through Windows subsystem for Linux 2 (WSL2). Check out [Get started with Windows Subsystem for Linux (WSL) on Arm](/learning-paths/laptops-and-desktops/wsl2/setup/) to learn more.
 {{% /notice %}}
 
 ## Install software tools

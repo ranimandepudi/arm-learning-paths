@@ -20,12 +20,12 @@ This reference code is functionally-identical to KleidiAI's micro-kernels, and i
 2. To explain how KleidiAI micro-kernels work. The implementation within KleidiAI's micro-kernels use hand-optimized C and Arm Assembly code, which can be difficult to interpret.
 
 
-## Build and Run the KleidiAI C++ example (i8mm micro-kernel)
+## Build and run the KleidiAI C++ example (i8mm micro-kernel)
 
 Follow these steps to build and run the KleidiAI library and example script:
 
 1. Create an Ubuntu 24.04 Arm Linux machine on an AWS EC2 instance. 
-For more details view the Learning Path on [setting up AWS EC2 Graviton instances](https://learn.arm.com/learning-paths/servers-and-cloud-computing/csp/aws/). Use an M7g-medium instance type, which uses the Graviton 3 SoC supporting the *i8mm* Arm architecture feature. The 1 CPU and 4 GB of RAM in the M7g-medium are sufficient for this basic example run.
+For more details view the Learning Path on [setting up AWS EC2 Graviton instances](/learning-paths/servers-and-cloud-computing/csp/aws/). Use an M7g-medium instance type, which uses the Graviton 3 SoC supporting the *i8mm* Arm architecture feature. The 1 CPU and 4 GB of RAM in the M7g-medium are sufficient for this basic example run.
 
 2. Initialize your system by installing essential packages:
 ```bash

@@ -1,5 +1,6 @@
 ---
 title: Measure performance of ClickHouse on Arm servers
+description: Learn how to install ClickHouse on Arm-based cloud instances and measure database performance using ClickBench to determine appropriate instance configurations.
 
 minutes_to_complete: 45
 
@@ -14,9 +15,18 @@ prerequisites:
 
 author: Pareena Verma
 
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
+
 ### Tags
 skilllevels: Introductory
 subjects: Databases
+cloud_service_providers:
+  - AWS
+  - Microsoft Azure
+  - Google Cloud
+  - Oracle
 armips:
     - Neoverse
 tools_software_languages:
@@ -41,9 +51,8 @@ further_reading:
         type: documentation
     - resource:
         title: Improve ClickHouse performance on Arm-based AWS Graviton3 servers
-        link: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/improve-clickhouse-performance-up-to-26-by-using-aws-graviton3
+        link: https://developer.arm.com/community/arm-community-blogs/b/servers-and-cloud-computing-blog/posts/improve-clickhouse-performance-up-to-26-by-using-aws-graviton3
         type: blog
-
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================
@@ -51,3 +60,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

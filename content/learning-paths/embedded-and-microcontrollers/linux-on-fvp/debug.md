@@ -1,5 +1,6 @@
 ---
 title: Debug the software stack
+description: Use Arm Development Studio to debug Trusted Firmware-A and the Linux kernel while the software stack runs on an FVP.
 weight: 6
 
 ### FIXED, DO NOT MODIFY
@@ -89,4 +90,4 @@ Ensure your FVP instance is running and matches the model and parameters selecte
 
 After these steps, you can debug the software stack as shown in the following figure:
 
-![FVP running #center](Select_target.png "Debug interface in GUI")
+![FVP running #center](select_target.webp "Debug interface in GUI")

@@ -1,59 +1,59 @@
 ---
-title: Build Zephyr applications in VS Code
+title: Build a Zephyr application with Workbench for Zephyr
+description: Create and build a Zephyr application with Workbench for Zephyr and prepare it for a supported development board.
 weight: 3
 
 ### FIXED, DO NOT MODIFY
 layout: learningpathall
 ---
 
-## Create and build your first Zephyr application
+## Set up your Zephyr development board and environment
 
-In this session, you'll learn how to create and build your first Zephyr application using Zephyr Workbench. This step prepares you to customize, test, and expand real firmware projects on Arm Cortex-M boards.
+In this section, you'll learn how to create and build your first Zephyr application using Workbench for Zephyr. This step prepares you to customize, test, and expand real firmware projects on Arm Cortex-M boards.
+For this demonstration, you'll use an [NXP FRDM-MCXN947](https://www.nxp.com/design/design-center/development-boards-and-designs/FRDM-MCXN947) development board as your target device. The same process works for any Zephyr-supported Arm Cortex-M board. 
 
-For demonstration, you'll use an [NXP FRDM-MCXN947](https://www.nxp.com/design/design-center/development-boards-and-designs/FRDM-MCXN947) development board as the target device. However, the same steps apply to any Zephyr-supported Arm Cortex-M board. 
-You can find the full list of supported boards in the [Supported Boards](https://docs.zephyrproject.org/latest/boards/#).
+To see all compatible boards, visit the [Zephyr Supported Boards list](https://docs.zephyrproject.org/latest/boards/#).
 
-Depending on your board, you might need to install a different debug tool. The next module covers this setup.
+Depending on your board, you might need to install a different debug tool aka `runner`. The next section covers this setup.
 
-### Create application
+## Create the application
 
-In the Zephyr Workbench panel:
+In the **Workbench for Zephyr** panel, select **Create New Application**.
 
-1. Select **Create New Application**
-2. Configure your project:
-   - Select workspace and SDK
-   - Choose your target board (for example, NXP FRDM-MCXN947)
-   - Select a sample app (for example, `hello_world`)
-   - Provide a project name
+Configure your project:
+    - Select the workspace and SDK version.
+    - Choose your target board (for example, NXP FRDM-MCXN947).
+    - Select a sample application (for example, `hello_world`).
+    - Enter a project name.
 
-![Create App](images/create_app.png)
+After you complete these steps, Workbench for Zephyr creates the project and prepares it for building.
 
-### Build the application
+![Workbench for Zephyr Create New Application panel in VS Code showing fields for workspace selection, SDK version, target board, sample application, and project name#center](images/create_app.webp "Workbench for Zephyr Create New Application panel")
 
-Select the **Build** button in Zephyr Workbench or press `Ctrl+Shift+B`.
+## Build the application
+
+Select the **Build** button in Workbench for Zephyr or press `Ctrl+Shift+B`.
 
 The build system compiles your application and links it against the Zephyr kernel and board-specific drivers.
 
-![Build Application](images/build_application.png)
+![Workbench for Zephyr build output panel in VS Code confirming a successful build, showing the memory region summary with FLASH and SRAM usage for the hello_world application#center](images/debug_app.webp "Workbench for Zephyr build output")
 
-### Install board-specific debug utilities
+## Install board-specific debug utilities
 
 To enable debugging on your target hardware, you might need to install additional tools based on the board vendor.
 
 For the NXP FRDM-MCXN947, download and install the LinkServer debug utility:
 - LinkServer for Microcontrollers: [NXP LinkServer Download Page](https://www.nxp.com/design/design-center/software/development-software/mcuxpresso-software-and-tools-/linkserver-for-microcontrollers:LINKERSERVER)
 
-Once installed, Zephyr Workbench attempts to detect it automatically during a debug session.
+Once installed, Workbench for Zephyr attempts to detect it automatically during a debug session.
 If you're using a different board, see your vendor's documentation to install the appropriate debug utility.
 
-{{% notice Note %}}
-If Zephyr Workbench doesn't automatically detect the installed debug runner, you can manually configure it.
-Open the **Debug Manager** from the Zephyr sidebar, and enter the full path to the runner executable.
-{{% /notice %}}
+{{% notice Note %}} If Workbench for Zephyr doesn't automatically detect the installed debug runner, you can manually configure it.
+Open the **Debug Manager** from the Zephyr sidebar, and enter the full path to the runner executable.{{% /notice %}}
 
-### Review output
+## Review the output
 
-Check the build output at the bottom panel of VS Code. Make sure there are no errors or warnings. A successful build displays:
+Check the build output in the VS Code output panel. Make sure there are no errors or warnings. A successful build displays:
 
 ```output
 Building ‘hello_world’ for frdm_mcxn947
@@ -62,25 +62,25 @@ Memory region         Used Size  Region Size  % Used
             SRAM:       4048 B       256 KB      1.5%
 ```
 
-### Code walkthrough: hello_world
+## Code walkthrough: hello_world
 
 The following code shows a basic Zephyr application that prints a message to the console:
 
 ```c
 #include <zephyr/kernel.h>
-#include <zephyr/sys/printk.h>
+#include <zephyr/stdio.h>
 
 int main(void)
 {
-    printk("Hello World! %s\n", CONFIG_BOARD); // Prints board name to serial console
+    printk("Hello World! %s\n", CONFIG_BOARD_TARGET); // Prints board name to serial console
     return 0;
 }
 ```
 
-`CONFIG_BOARD` expands to your target board name. You'll modify this app in the next module!
+`CONFIG_BOARD_TARGET` expands to your target board and revision identifier.
 
-### Try this: modify and rebuild
+## Try this: modify and rebuild
 
 Now that the app works, try editing the message in `printk()` or changing the board target in the application settings. Then rebuild and observe the output. This helps verify that your toolchain and workspace respond correctly to code and config changes.
 
-With your first Zephyr application successfully built, you're ready to take the next step—debugging. In the next module, you'll launch a debug session, set breakpoints, and perform memory analysis using Zephyr Workbench. These skills help you validate and optimize applications running on real Arm Cortex-M hardware.
+With your first Zephyr application successfully built, you're ready to take the next step, which is debugging. In the next section, you'll launch a debug session, set breakpoints, and perform memory analysis using Workbench for Zephyr. These skills help you validate and optimize applications running on real Arm Cortex-M hardware.

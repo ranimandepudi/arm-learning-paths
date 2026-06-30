@@ -15,7 +15,7 @@ The example has been tested on [AWS EC2](https://aws.amazon.com/ec2/) and an [Am
 
 ## Installation
 
-You need Docker to run Open AD Kit. Refer to the [Docker install guide](https://learn.arm.com/install-guides/docker/) to learn how to install Docker on an Arm platform.
+You need Docker to run Open AD Kit. Refer to the [Docker install guide](/install-guides/docker/) to learn how to install Docker on an Arm platform.
 
 First, verify Docker is installed on your development computer by running:
 
@@ -105,4 +105,6 @@ This command starts a new Docker container named `visualizer`, ensuring it runs 
 docker run --name visualizer --rm -it -p 6080:6080 ghcr.io/autowarefoundation/demo-packages:visualizer
 ```
 
-After gaining a basic understanding of Open AD Kit, the next section will guide you through running three containers simultaneously on a single physical machine.
+## What you've learned and what's next
+
+You now understand the three core components of Open AD Kit (simulator, planning-control, and visualizer) and how they interact through ROS 2 topics. In the next section, you'll run all three containers together using Docker Compose to execute a complete autonomous driving simulation.

@@ -2,6 +2,7 @@
 ### Title the install tools article with the name of the tool to be installed
 ### Include vendor name where appropriate
 title: VNC on Arm Linux
+description: Install and configure VNC with an xfce desktop on Arm Linux so you can connect to a remote graphical development environment.
 
 ### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
@@ -16,6 +17,7 @@ author: Jason Andrews
 
 ### Link to official documentation
 official_docs: https://tigervnc.org/
+ecosystem_dashboard: https://developer.arm.com/ecosystem-dashboard/linux?package=TurboVNC
 
 test_images:
 - ubuntu:latest
@@ -73,9 +75,10 @@ Create a file at `$HOME/.vnc/xstartup` with the following contents:
 
 ```console
 #!/bin/sh
-unset SESSION_MANAGER
-unset DBUS_SESSION_BUS_ADDRESS
-exec startxfce4
+# select your favorite windows manager here
+/bin/bash -l <<EOF
+exec /etc/X11/Xsession startxfce4
+EOF
 ```
 Make sure the `xstartup` file has executable permissions:
 
@@ -152,4 +155,4 @@ You will be prompted for the password you created earlier with `vncpasswd`.
 
 A remote Linux desktop should appear on your local computer. When you are finished, close the VNC client first and then exit the SSH connection.
 
-![Linux desktop #center](/install-guides/_images/xfce4.png)
+![Linux desktop #center](/install-guides/_images/xfce4.webp)

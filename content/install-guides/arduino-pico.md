@@ -1,5 +1,6 @@
 ---
 title: Arduino core for the Raspberry Pi Pico
+description: Install the Arduino IDE and Raspberry Pi Pico board support so you can build and upload Arduino sketches for RP2040-based boards.
 author: Michael Hall
 additional_search_terms:
 - arduino
@@ -40,7 +41,7 @@ From the menu select `Tools -> Board -> Boards Manager`.
 
 When the `Boards Manager` opens search for `pico` and the `Arduino Mbed OS RP2040 Boards` will be displayed. Click the `Install` button to add it to the Arduino IDE.
 
-![Arduino Board Manager](/install-guides/_images/arduino_rp2040_boards.png)
+![Arduino Board Manager](/install-guides/_images/arduino_rp2040_boards.webp)
 
 ### How do I set up the Raspberry Pi Pico W?
 

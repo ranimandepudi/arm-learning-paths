@@ -18,7 +18,7 @@ The open-source model consists of three main submodules. They are described in t
 |AutoEncoder| Compresses audio waveforms into a latent representation for processing by the DiT model, and decompresses the output back into audio. |
 
 
-![Model structure#center](./model.png)
+![Model structure#center](./model.webp)
 
 In this section, you will explore two different conversion routes, to convert the submodules to [LiteRT](https://ai.google.dev/edge/litert) format. Both methods will be run using Python wrapper scripts from the examples repository.
 
@@ -110,7 +110,7 @@ python3 ./scripts/export_dit_autoencoder.py --model_config "$WORKSPACE/model_con
 
 After successful conversion, you now have `dit_model.tflite` and `autoencoder_model.tflite` models in your current directory.
 
-A more detailed explanation of the above scripts is available [here](https://github.com/ARM-software/ML-examples/blob/main/kleidiai-examples/audiogen/scripts/README.md).
+A more detailed explanation of the above scripts is available in the [audiogen scripts README](https://github.com/ARM-software/ML-examples/blob/main/kleidiai-examples/audiogen/scripts/README.md).
 
 For easy access, add all the required models to one directory:
 

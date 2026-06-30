@@ -8,7 +8,7 @@ layout: learningpathall
 
 ## Host machine requirements
 
-This Learning Path demonstrates how to improve the performance of camera pipelines using KleidiAI and KleidiCV on Arm. You’ll need an Arm64 machine, preferably running an Ubuntu-based distribution. The instructions have been tested on Ubuntu 24.04.
+This Learning Path demonstrates how to improve the performance of camera pipelines using SME2 on Arm. You’ll need an Arm64 machine with SME2 support, preferably running an Ubuntu-based distribution. The instructions have been tested on Ubuntu 24.04.
 
 ## Install required software
 
@@ -45,7 +45,7 @@ docker --version
 Docker version 27.3.1, build ce12230
 ```
 
-If you see "`docker: command not found`," follow the [Docker Install Guide](https://learn.arm.com/install-guides/docker/).
+If you see "`docker: command not found`," follow the [Docker Install Guide](/install-guides/docker/).
 
 {{% notice Note %}}
 You might need to log in again or restart your machine for the changes to take effect.

@@ -2,6 +2,7 @@
 ### Title the install tools article with the name of the tool to be installed
 ### Include vendor name where appropriate
 title: AVH FVPs on macOS
+description: Run Arm Virtual Hardware Fixed Virtual Platforms on macOS with Docker containers so you can use FVP models from an Apple development machine.
 
 ### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
@@ -26,7 +27,8 @@ multi_install: false            # Set to true if first page of multi-page articl
 multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
 layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
-This guide is intended to get you up and running with the [Arm Virtual Hardware (AVH) Fixed Virtual Platforms (FVPs)](https://www.arm.com/products/development-tools/simulation/virtual-hardware) on macOS. For a thorough review of all options, refer to the official documentation.
+This guide shows you how to use [Arm Virtual Hardware (AVH) Fixed Virtual Platforms (FVPs)](https://www.arm.com/products/development-tools/simulation/virtual-hardware) on macOS by running them in Docker containers. The [official repository](https://github.com/Arm-Examples/FVPs-on-Mac/blob/main/README.md) provides additional technical details.
+
 
 ## What are the prerequisites for running AVH FVPs on macOS?
 

@@ -12,18 +12,23 @@ learning_objectives:
 prerequisites:
     - A Windows on Arm computer such as the Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
     - Any code editor. [Visual Studio Code for Arm64](https://code.visualstudio.com/docs/?dv=win32arm64user) is suitable.
-    - Completion of this [Learning Path](/learning-paths/servers-and-cloud-computing/serverless-framework-aws-intro/).
+    - Completion of [Deploy AWS services using the Serverless Framework](/learning-paths/servers-and-cloud-computing/serverless-framework-aws-intro/).
 
 author: Dawid Borycki
+
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
 
 ### Tags
 skilllevels: Introductory
 subjects: Web
-cloud_service_providers: AWS
+cloud_service_providers:
+  - AWS
 
 armips:
     - Neoverse
-    
+
 tools_software_languages:
     - Node.js
     - Visual Studio Code
@@ -33,11 +38,10 @@ operatingsystems:
     - Windows
     - macOS
 
-
 further_reading:
     - resource:
         title: Terraform on Azure
-        link: https://learn.arm.com/learning-paths/servers-and-cloud-computing/azure-terraform/
+        link: /learning-paths/servers-and-cloud-computing/azure-terraform/
         type: Tutorial
     - resource:
         title: Azure Virtual Machines with Ampere Altra Arm–based processors—generally available
@@ -48,11 +52,10 @@ further_reading:
         link: https://learn.microsoft.com/en-us/azure/bastion/bastion-overview
         type: Documentation
 
-
-
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

@@ -5,6 +5,8 @@ minutes_to_complete: 30
 
 who_is_this_for: This is an introductory topic for software developers who want to learn about Large System Extensions and use them in an application.
 
+description: Understand Large System Extensions (LSE) for Arm processors and verify whether applications use LSE for improved atomic operation performance.
+
 learning_objectives:
     - Learn about Large System Extensions
     - Find out if an application uses Large System Extensions
@@ -14,9 +16,18 @@ prerequisites:
 
 author: Jason Andrews
 
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
+
 ### Tags
 skilllevels: Introductory
 subjects: Performance and Architecture
+cloud_service_providers:
+  - AWS
+  - Microsoft Azure
+  - Google Cloud
+  - Oracle
 armips:
     - Neoverse 
 operatingsystems:
@@ -25,7 +36,6 @@ tools_software_languages:
     - GCC
     - Runbook
 
-    
 further_reading:
     - resource:
         title: Improving Java performance on Neoverse N1 systems
@@ -37,10 +47,8 @@ further_reading:
         type: blog
     - resource:
         title: Learn about glibc with Large System Extensions (LSE) for performance improvement
-        link: https://learn.arm.com/learning-paths/servers-and-cloud-computing/glibc-with-lse/
+        link: /learning-paths/servers-and-cloud-computing/glibc-with-lse/
         type: website
-
-
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================
@@ -48,3 +56,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

@@ -1,5 +1,6 @@
 ---
 title: Run a Large Language Model (LLM) chatbot on a Raspberry Pi 5
+description: Install llama.cpp Python bindings on Raspberry Pi 5, download an LLM, and run an interactive chatbot locally.
 weight: 2
 
 ### FIXED, DO NOT MODIFY
@@ -26,8 +27,7 @@ You use [llama.cpp](https://github.com/ggerganov/llama.cpp), an open source C/C+
 
 Memory size is an important factor to consider when selecting an LLM because many LLMs have memory requirements that are too large for edge devices, such as the Raspberry Pi 5. An idea of the required memory size can be obtained by looking at the number of parameters of the model. A higher number of parameters means more memory used. 
 
-You can also use the [Memory Model Calculator](https://huggingface.co/docs/accelerate/main/en/usage_guides/model_size_estimator
-) from Hugging Face to estimate memory size. 
+You can also use the [Memory Model Calculator](https://huggingface.co/docs/accelerate/main/en/usage_guides/model_size_estimator) from Hugging Face to estimate memory size. 
 
 Copy the string below:
 

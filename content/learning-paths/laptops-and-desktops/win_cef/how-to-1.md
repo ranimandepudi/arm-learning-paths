@@ -103,7 +103,7 @@ Let's run the `cefsimple` application. The binaries can be found under the `buil
 
 By default, the application renders the Google homepage:
 
-![fig2](figures/02.png)
+![fig2](figures/02.webp)
 
 ## Modify the application
 You will now modify the `cefsimple` application to render a custom page. This page will fetch data from `JSONPlaceholder` and display it in a table.
@@ -221,11 +221,11 @@ You will now create a custom index.html file to fetch the data from the JSONPlac
 
 Re-run the application and you will see the following:
 
-![fig3](figures/03.png)
+![fig3](figures/03.webp)
 
 This example demonstrates the versatility and power of CEF applications. One of their key strengths is the ability to modify the rendered content dynamically. This means you can change what's displayed in the application, like updating the HTML or CSS, without having to rebuild the entire application each time. This feature significantly streamlines the development process, making it quicker and more efficient.
 
-Let's leverage this capability to enhance our application. You will focus on styling the application by updating the HTML and CSS, providing a more engaging and visually appealing user interface. This step will show how easily you can improve the look and feel of your CEF application with just a few modifications to the web content.
+Let's leverage this capability to enhance our application. You will focus on styling the application by updating the HTML and CSS, providing a more engaging and visually appealing user interface. This step will show how easily you can improve the look and feel of your CEF application with a few modifications to the web content.
 
 ### Style the application
 Add `styles.css` file to modify the appearance of the application:
@@ -296,7 +296,7 @@ button:hover {
 
 After re-running the application you will see the following:
 
-![fig4](figures/04.png)
+![fig4](figures/04.webp)
 
 ## Summary
 CEF is a powerful tool for integrating web browser functionalities into desktop applications, utilizing modern web technologies. You have learned how to setup a project, create a basic application, and use CMake for CEF projects. Additionally, you have explored more advanced features like fetching and displaying data from JSONPlaceholder, adding and styling HTML elements like tables and buttons through separate CSS files all on your Windows on Arm machine.

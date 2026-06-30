@@ -1,5 +1,6 @@
 ---
 title: Optimize graphics vertex efficiency for Arm GPUs
+description: Learn how to optimize vertex representations and analyze Vertex Memory Efficiency using Arm Frame Advisor for improved GPU performance on Android.
 
 minutes_to_complete: 10
 
@@ -17,6 +18,10 @@ author:
     - Andrew Kilroy
     - Peter Harris
 
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
+
 ### Tags
 skilllevels: Advanced
 subjects: Performance and Architecture
@@ -25,7 +30,7 @@ armips:
     - Mali
 tools_software_languages:
     - C
-    - C++
+    - CPP
 operatingsystems:
     - Android
 
@@ -40,7 +45,7 @@ further_reading:
         type: documentation
     - resource:
         title: Analyze a Frame with Frame Advisor
-        link: https://learn.arm.com/learning-paths/mobile-graphics-and-gaming/analyze_a_frame_with_frame_advisor/
+        link: /learning-paths/mobile-graphics-and-gaming/analyze_a_frame_with_frame_advisor/
         type: blog
     - resource:
         title: Arm Performance Studio
@@ -51,11 +56,10 @@ further_reading:
         link: https://developer.arm.com/documentation/101897/0304/Vertex-shading/Attribute-layout
         type: website
 
-
-
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

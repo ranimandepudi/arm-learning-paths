@@ -145,16 +145,16 @@ Called from:
                             {{end}}
                         </td>
                     </tr>
-                {{ if .Params.test_maintenance}}
+                    {{if and (not $is_learning_path) .Params.ecosystem_dashboard}}
                     <tr>
-                        <td class="td-metadata-key">
-                            Test status:
+                        <td class="td-metadata-key nowrap">
+                            Ecosystem dashboard:
                         </td>
                         <td class="td-metadata-value">
-                            {{ partial "test-maintenance/test-maintenance" . }}
+                            <a id="ecosystem-dashboard-link" href="{{.Params.ecosystem_dashboard}}" target="_blank">View {{ partial "general-formatting/external-link.html"}} </a>
                         </td>
                     </tr>
-                {{end}}
+                    {{end}}
                 </table>
             </div>
             <!-- RIGHT TABLE, mobile -->
@@ -199,18 +199,18 @@ Called from:
                             {{end}}
                         </td>
                     </tr>
-                {{ if .Params.test_maintenance}}
+                    {{if and (not $is_learning_path) .Params.ecosystem_dashboard}}
                     <tr>
                         <td class="td-metadata-key width-max-content">
-                            Test status:
+                            Ecosystem dashboard:
                         </td>
                     </tr>
                     <tr>
-                        <td class="td-metadata-value">
-                            {{ partial "test-maintenance/test-maintenance" . }}
+                        <td class="td-metadata-value margin-l-24">
+                            <a id="ecosystem-dashboard-link" href="{{.Params.ecosystem_dashboard}}" target="_blank">View {{ partial "general-formatting/external-link.html"}} </a>
                         </td>
                     </tr>
-                {{end}}
+                    {{end}}
                 </table>
             </div>
         </div>
@@ -292,13 +292,13 @@ Called from:
                                         {{ .Params.subjects }}
                                     </ads-tag>
                                 {{end}}
-                                {{ if .Params.cloud_service_providers }}
-                                    <ads-tag    href='{{ "/" | relLangURL}}tag/{{.Params.cloud_service_providers | urlize}}' style="margin-bottom: 4px;">
+                                {{ range .Params.cloud_service_providers }}
+                                    <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}' style="margin-bottom: 4px;">
                                         <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                         <span class="fa-solid fa-tag"></span>
-                                        {{ .Params.cloud_service_providers }}
+                                        {{ . }}
                                     </ads-tag>
-                                {{end}}
+                                {{ end }}
                                 {{ range .Params.operatingsystems }}
                                     <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}' style="margin-bottom: 4px;">
                                         <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
@@ -421,13 +421,13 @@ Called from:
                                         {{ .Params.subjects }}
                                     </ads-tag>
                                 {{end}}
-                                {{ if .Params.cloud_service_providers }}
-                                    <ads-tag    href='{{ "/" | relLangURL}}tag/{{.Params.cloud_service_providers | urlize}}' style="margin-bottom: 4px;">
+                                {{ range .Params.cloud_service_providers }}
+                                    <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}' style="margin-bottom: 4px;">
                                         <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                         <span class="fa-solid fa-tag"></span>
-                                        {{ .Params.cloud_service_providers }}
+                                        {{ . }}
                                     </ads-tag>
-                                {{end}}
+                                {{ end }}
                                 {{ range .Params.operatingsystems }}
                                     <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}' style="margin-bottom: 4px;">
                                         <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
@@ -470,7 +470,7 @@ Called from:
             </div>
         </div>
         {{if not $is_learning_path}}
-            <p style="margin-top: 24px;">This guide is intended to get you up and running with this tool quickly with the most common settings. For a thorough review of all options, refer to the official documentation.</p>
+            <p style="margin-top: 24px;">This guide shows you how to install and use the tool with the most common configuration. For advanced options and complete reference information, see the official documentation. Some install guides also include optional next steps to help you explore related workflows or integrations.</p>
         {{end}}
     </div>
 </div>

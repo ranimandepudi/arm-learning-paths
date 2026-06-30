@@ -2,6 +2,7 @@
 ### Title the install tools article with the name of the tool to be installed
 ### Include vendor name where appropriate
 title: STM32 extensions for VS Code
+description: Install STM32 extensions and dependencies for Visual Studio Code so you can configure and develop STM32 projects on desktop hosts.
 
 ### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
@@ -69,7 +70,7 @@ Run the installer(s) and follow on-screen instructions.
 
 ### How do I install Git for version control functionality?
 
-You can download the latest version from [here](https://git-scm.com/).
+You can download the latest version from [git-scm.com](https://git-scm.com/).
 
 ### What about Keil Studio for VS Code?
 

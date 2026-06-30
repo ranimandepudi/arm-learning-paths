@@ -1,5 +1,6 @@
 ---
 title: Run the Linux software stack on an FVP
+description: Launch the Linux software stack on an Arm FVP and verify that the virtual platform boots successfully.
 weight: 5
 
 ### FIXED, DO NOT MODIFY
@@ -101,4 +102,4 @@ Always check the name of the CPU instance when switching between different FVP m
 
 You can also run the FVP using its graphical user interface:
 
-![GUI #center](FVP.png "View of the FVP GUI")
+![GUI #center](fvp.webp "View of the FVP GUI")

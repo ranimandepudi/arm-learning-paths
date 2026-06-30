@@ -15,9 +15,18 @@ prerequisites:
 
 author: James Whitaker
 
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
+
 ### Tags
 skilllevels: Introductory
 subjects: Performance and Architecture
+cloud_service_providers:
+  - AWS
+  - Microsoft Azure
+  - Google Cloud
+  - Oracle
 armips:
     - Cortex-A 
     - Neoverse
@@ -28,21 +37,19 @@ tools_software_languages:
 operatingsystems:
     - Linux
 
-
 further_reading:
     - resource:
         title: Perf for Linux on Arm (LinuxPerf)
-        link: https://learn.arm.com/install-guides/perf/
+        link: /install-guides/perf/
         type: website
     - resource:
-        title: AWS Perf (APerf) 
-        link: https://learn.arm.com/install-guides/aperf/
+        title: APerf 
+        link: /install-guides/aperf/
         type: website
     - resource:
         title: Arm Performance Studio
-        link: https://learn.arm.com/install-guides/ams/
+        link: /install-guides/ams/
         type: website
-
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================
@@ -50,3 +57,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

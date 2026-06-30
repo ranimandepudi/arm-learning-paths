@@ -1,5 +1,6 @@
 ---
 title: Build a CCA Attestation Service on AWS with Veraison
+description: Learn how to deploy a scalable Arm CCA attestation verifier service on AWS using Veraison components with platform endorsement provisioning.
 
 minutes_to_complete: 90
 
@@ -15,9 +16,15 @@ prerequisites:
 
 author: Paul Howard
 
+generate_summary_faq: true
+rerun_summary: false
+rerun_faqs: false
+
 ### Tags
 skilllevels: Advanced
 subjects: Performance and Architecture
+cloud_service_providers:
+  - AWS
 armips:
     - Neoverse
     - Cortex-A
@@ -48,3 +55,4 @@ weight: 1                       # _index.md always has weight of 1 to order corr
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
+

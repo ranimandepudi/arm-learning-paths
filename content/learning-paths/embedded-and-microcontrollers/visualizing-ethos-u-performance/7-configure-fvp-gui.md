@@ -1,6 +1,7 @@
 ---
 # User change
 title: "Enable GUI and deploy a model on Corstone-320 FVP"
+description: Enable the Corstone-320 FVP graphical interface so you can visualize model execution while inference runs.
 
 weight: 7 # 1 is first, 2 is second, etc.
 
@@ -70,7 +71,7 @@ Now run the Mobilenet V2 computer vision model, using [executorch/examples/arm/r
 
 Observe that the FVP loads the model file, compiles the PyTorch model to ExecuTorch `.pte` format and then shows an instruction count in the top right of the GUI:
 
-![Terminal and FVP output#center](./Terminal%20and%20FVP%20Output.jpg "Terminal and FVP output")
+![Terminal and FVP output#center](./terminal_and_fvp_output.webp "Terminal and FVP output")
 
 {{% notice Note %}}
 
